@@ -229,9 +229,14 @@ console.log( 'The total number of credit purchases is:', numCreditPurchases );
   - The assembled array should be made up of strings, not full `transaction` objects.
   - This array is allowed to contain duplicate values.
 */
-var allVendors;
+var allVendors = [];
+transactions.forEach( function(transaction) {
+  if (transaction.vendor) {
+    allVendors.push(transaction.vendor);
+  }
+});
 
-// console.log( 'The vendors are:', allVendors );
+console.log( 'The vendors are:', allVendors );
 
 
 // --------------------------------------------------
