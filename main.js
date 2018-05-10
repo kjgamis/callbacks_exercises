@@ -130,8 +130,14 @@ console.log( 'The total number of transactions is:', totalTransactions );
   HINT(S):
   - Not all transactions are 'sales'.
 */
-var numSales;
-
+var sales = []
+transactions.forEach( function(transaction) {
+  var eachSale = [];
+  if (transaction.type === 'sale') {
+    sales.push(transaction);
+  }
+});
+var numSales = sales.length;
 /*
   Hey, welcome to the first question!
 
@@ -162,7 +168,7 @@ console.log( 'The total number of sales is:', numSales );
 */
 var numPurchases;
 
-console.log( 'The total number of purchases is:', numPurchases );
+// console.log( 'The total number of purchases is:', numPurchases );
 
 
 // --------------------------------------------------
@@ -176,7 +182,7 @@ console.log( 'The total number of purchases is:', numPurchases );
 */
 var numCashSales;
 
-console.log( 'The total number of cash sales is:', numCashSales );
+// console.log( 'The total number of cash sales is:', numCashSales );
 
 
 // --------------------------------------------------
@@ -190,7 +196,7 @@ console.log( 'The total number of cash sales is:', numCashSales );
 */
 var numCreditPurchases;
 
-console.log( 'The total number of credit purchases is:', numCreditPurchases );
+// console.log( 'The total number of credit purchases is:', numCreditPurchases );
 
 
 // --------------------------------------------------
@@ -207,7 +213,7 @@ console.log( 'The total number of credit purchases is:', numCreditPurchases );
 */
 var allVendors;
 
-console.log( 'The vendors are:', allVendors );
+// console.log( 'The vendors are:', allVendors );
 
 
 // --------------------------------------------------
@@ -224,7 +230,7 @@ console.log( 'The vendors are:', allVendors );
 */
 var uniqueCustomers;
 
-console.log( 'The unique customers are:', uniqueCustomers );
+// console.log( 'The unique customers are:', uniqueCustomers );
 
 
 // --------------------------------------------------
@@ -242,7 +248,7 @@ console.log( 'The unique customers are:', uniqueCustomers );
 */
 var bigSpenders;
 
-console.log( 'The "big spenders" are:', bigSpenders );
+// console.log( 'The "big spenders" are:', bigSpenders );
 
 
 // --------------------------------------------------
@@ -256,7 +262,7 @@ console.log( 'The "big spenders" are:', bigSpenders );
 */
 var sumSales;
 
-console.log( 'The sum of all sales is:', sumSales );
+// console.log( 'The sum of all sales is:', sumSales );
 
 
 // --------------------------------------------------
@@ -272,7 +278,7 @@ console.log( 'The sum of all sales is:', sumSales );
 
 var sumPurchases;
 
-console.log( 'The sum of all purhcases is:', sumPurchases );
+// console.log( 'The sum of all purhcases is:', sumPurchases );
 
 
 // --------------------------------------------------
@@ -290,7 +296,7 @@ console.log( 'The sum of all purhcases is:', sumPurchases );
 */
 var netProfit;
 
-console.log( 'The net profit is:', netProfit );
+// console.log( 'The net profit is:', netProfit );
 
 
 // --------------------------------------------------
@@ -304,7 +310,7 @@ console.log( 'The net profit is:', netProfit );
 */
 var mostItems;
 
-console.log( 'The most items sold in a single transaction is:', mostItems );
+// console.log( 'The most items sold in a single transaction is:', mostItems );
 
 
 // --------------------------------------------------
@@ -315,4 +321,4 @@ console.log( 'The most items sold in a single transaction is:', mostItems );
 */
 var sumOfSmallestPurchase;
 
-console.log( 'The sum of the smallest purchase is:', sumOfSmallestPurchase );
+// console.log( 'The sum of the smallest purchase is:', sumOfSmallestPurchase );
