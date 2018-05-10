@@ -251,7 +251,20 @@ console.log( 'The vendors are:', allVendors );
   - The assembled array should be made up of strings, not full `transaction` objects.
   - Make sure that the resulting array *does not* include any duplicates.
 */
-var uniqueCustomers;
+var uniqueCustomers = [];
+transactions.forEach ( function(transaction) {
+  if (transaction.customer) {
+//     uniqueCustomers.forEach( function(customer) {
+//       unless (customer === transaction.customer) {
+        uniqueCustomers.push(transaction.customer);
+//       }
+//     });
+  }
+});
+
+uniqueCustomers.forEach( function(customer) {
+  console.log(customer);
+});
 
 // console.log( 'The unique customers are:', uniqueCustomers );
 
