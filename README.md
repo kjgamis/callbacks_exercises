@@ -34,4 +34,4 @@
   - `.reduce()`
   - `.sort()`
 - Documentation for these methods (and the other 'Array Extras') can be found here.
-Bitmaker's intro to callback functions can be found here.
+- Bitmaker's intro to callback functions can be found here.
