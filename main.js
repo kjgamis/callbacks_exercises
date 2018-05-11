@@ -370,9 +370,13 @@ console.log( 'The net profit is:', netProfit );
   HINTS:
   - The result of this calculation should be a number (not an array, object, or other data type).
 */
-var mostItems;
-
-// console.log( 'The most items sold in a single transaction is:', mostItems );
+var mostItems = [];
+transactions.forEach( function(transaction) {
+  numItems = transaction.items.length;
+  mostItems.push(numItems);
+});
+mostItems.sort();
+console.log( 'The most items sold in a single transaction is:', mostItems[mostItems.length - 1] );
 
 
 // --------------------------------------------------
