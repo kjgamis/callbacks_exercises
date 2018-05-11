@@ -310,7 +310,7 @@ transactions.forEach( function(transaction) {
   if (transaction.type === 'sale') {
     sumSales += transaction.items[0].price;
   }
-})
+});
 
 console.log( 'The sum of all sales is:', sumSales );
 
@@ -326,9 +326,16 @@ console.log( 'The sum of all sales is:', sumSales );
   - Make sure to include 'price' information from *all* purchases.
 */
 
-var sumPurchases;
+var sumPurchases = 0;
+transactions.forEach( function(transaction) {
+  if (transaction.type === 'purchase') {
+    transaction.items.forEach( function(item) {
+      sumPurchases += item.price * -1;
+    });
+  }
+});
 
-// console.log( 'The sum of all purhcases is:', sumPurchases );
+console.log( 'The sum of all purchases is:', sumPurchases );
 
 
 // --------------------------------------------------
