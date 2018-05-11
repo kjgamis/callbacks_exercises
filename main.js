@@ -282,9 +282,18 @@ uniqueCustomers.forEach( function(customer) {
   - There may be more than 1 'sale' that includes 5 or more items.
   - Individual transactions do not have either `name` or `numItems` properties, we'll have to add them to the output.
 */
-var bigSpenders;
+var bigSpenders = [];
+transactions.forEach( function(transaction) {
+  if (transaction.items.length >= 5) {
+    if (transaction.customer ){
+      bigSpenders.push(transaction.customer);
+    } else if (transaction.vendor) {
+      bigSpenders.push(transaction.vendor);
+    }
+  }
+});
 
-// console.log( 'The "big spenders" are:', bigSpenders );
+console.log( 'The "big spenders" are:', bigSpenders );
 
 
 // --------------------------------------------------
