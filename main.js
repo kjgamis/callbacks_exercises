@@ -305,9 +305,14 @@ console.log( 'The "big spenders" are:', bigSpenders );
   HINT(S):
   - Transactions don't have 'prices', but their 'items' do!
 */
-var sumSales;
+var sumSales = 0;
+transactions.forEach( function(transaction) {
+  if (transaction.type === 'sale') {
+    sumSales += transaction.items[0].price;
+  }
+})
 
-// console.log( 'The sum of all sales is:', sumSales );
+console.log( 'The sum of all sales is:', sumSales );
 
 
 // --------------------------------------------------
